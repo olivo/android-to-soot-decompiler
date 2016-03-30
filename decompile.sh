@@ -6,6 +6,11 @@ JAVA_CLASSPATH="soot/axml-2.0.jar:soot/slf4j-api-1.7.5.jar:soot/slf4j-simple-1.7
 APK_FILE=$1
 SOOT_OUT_DIR=$2
 
+if [ -z "$APK_FILE" ] | [ -z "$SOOT_OUT_DIR" ]; then
+    echo "Usage: ./decompile <apk_file> <output_directory>"
+    exit 1
+fi
+
 PROCESS_THIS=" -process-dir $APK_FILE"
 SOOT_CLASSPATH="${APK_FILE}"
 
