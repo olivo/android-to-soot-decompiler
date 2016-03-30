@@ -6,4 +6,4 @@ for manual analysis of an Android App in a more Java-like language.
 
 
 # Usage
-./decompiler <apk_file> <output_directory>
+``./decompiler <apk_file> <output_directory>``
