@@ -1,2 +1,8 @@
 # android-to-soot-decompiler
-A script that decompiles an Android APK into Soot's Jimple IR.
+A bash script for decompiling an APK into Soot's jimple IR. Useful for
+performing static analysis with the Soot analysis framework, or 
+for manual analysis of an Android App in a more Java-like language.
+
+
+# Usage
+./decompiler <apk_file> <output_directory>
