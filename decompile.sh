@@ -14,7 +14,7 @@ fi
 PROCESS_THIS=" -process-dir $APK_FILE"
 SOOT_CLASSPATH="${APK_FILE}:java/rt.jar:java/jce.jar"
 
-SOOT_CMD="soot.Main -pp -cp $SOOT_CLASSPATH -d $SOOT_OUT_DIR -android-jars $ANDROID_JARS_PATH -src-prec apk -allow-phantom-refs -app -i java -ire -f J $PROCESS_THIS"
+SOOT_CMD="soot.Main -pp -cp $SOOT_CLASSPATH -d $SOOT_OUT_DIR -android-jars $ANDROID_JARS_PATH -src-prec apk -allow-phantom-refs -app -include-all -ire -f J $PROCESS_THIS"
 
 java -Xss50m -Xmx1500m -classpath ${JAVA_CLASSPATH} ${SOOT_CMD}
 
