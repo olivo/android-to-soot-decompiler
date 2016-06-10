@@ -12,7 +12,7 @@ if [ -z "$APK_FILE" ] | [ -z "$SOOT_OUT_DIR" ]; then
 fi
 
 PROCESS_THIS=" -process-dir $APK_FILE"
-SOOT_CLASSPATH="${APK_FILE}:java/rt.jar:java/jce.jar"
+SOOT_CLASSPATH="${APK_FILE}:java/rt.jar:java/jce.jar:soot/platforms/android--1/org.apache.http.legacy.jar"
 
 SOOT_CMD="soot.Main -pp -cp $SOOT_CLASSPATH -d $SOOT_OUT_DIR -android-jars $ANDROID_JARS_PATH -src-prec apk -allow-phantom-refs -app -include-all -ire -f J $PROCESS_THIS"
 
